@@ -60,32 +60,32 @@ pipeline {
         //https://help.sonatype.com/en/nexus-platform-plugin-for-jenkins.html
         //https://www.jenkins.io/doc/pipeline/steps/nexus-artifact-uploader/
         
-        stage('Publish to Nexus using Jenkins-nexus-plugin') {      
+        //stage('Publish to Nexus using Jenkins-nexus-plugin') {      
 
-            steps {
-                script {
+         //   steps {
+          //      script {
                     // Define artifact details
-                    def artifactPath = 'JJtechBatchApp/target/JJtechBatchApp.war'
-                    def groupId = 'com.jjtech'
-                    def artifactId = 'JJtechBatchApp.war'
-                    def version = '1.0.1'
-                    def repository = 'maven-releases'
+           //         def artifactPath = 'JJtechBatchApp/target/JJtechBatchApp.war'
+            //        def groupId = 'com.jjtech'
+            //        def artifactId = 'JJtechBatchApp.war'
+            //        def version = '1.0.1'
+            //        def repository = 'maven-releases'
 
-                    nexusArtifactUploader(
-                        nexusVersion: 'nexus3',
-                        protocol: 'http',
-                        nexusUrl: '54.198.199.108:8081/',  //replace me 
-                        repository: repository,
-                        groupId: groupId,
-                        version: version,
-                        credentialsId: 'nexus-creds', // (optional) replace me
-                        artifacts: [
-                            [artifactId: artifactId, file: artifactPath, type: 'war']
-                        ]
-                    )
-                }
-            }
-        }
+                //    nexusArtifactUploader(
+                //        nexusVersion: 'nexus3',
+                //        protocol: 'http',
+                //        nexusUrl: '54.198.199.108:8081/',  //replace me 
+                //        repository: repository,
+                //        groupId: groupId,
+                //        version: version,
+                //        credentialsId: 'nexus-creds', // (optional) replace me
+                //        artifacts: [
+                //            [artifactId: artifactId, file: artifactPath, type: 'war']
+                //        ]
+                //    )
+               // }
+           // }
+        //}
 
         // requires the Deploy to Container Plugin 
         //https://www.jenkins.io/doc/pipeline/steps/deploy/?utm_source=chatgpt.com#deploy-deploy-warear-to-a-container
