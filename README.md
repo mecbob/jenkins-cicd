@@ -19,8 +19,8 @@ In order to install nexus and Sonar, please follow steps outlined [here](https:/
 
 ### Configure SonarQube
 
-- create token
-- create sonar-jenkins [webhook](https://docs.sonarsource.com/sonarqube-server/2025.5/project-administration/webhooks) (only after the Jenkins Server is available) this will be used in the pipeline.
+- Create [tokne] (https://docs.sonarsource.com/sonarqube-server/10.0/user-guide/user-account/generating-and-using-tokens)
+- Create sonar-jenkins [webhook](https://docs.sonarsource.com/sonarqube-server/2025.5/project-administration/webhooks) (only after the Jenkins Server is available) this will be used in the pipeline.
 - 
 
 
@@ -95,8 +95,9 @@ On browser, paste http://`<public-IP-jenkins-server>`:8080
 
 ##### Install and configure Plugins
 Install the following  non default plugins
-- SonarQube scanner
+- SonarQube scanner, and 
   configure [SonarQube plugin](https://docs.sonarsource.com/sonarqube-server/analyzing-source-code/ci-integration/jenkins-integration/global-setup) plugin in Jenkins
+
 - NexusUploader
 - Deploy to container
 

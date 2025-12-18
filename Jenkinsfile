@@ -24,8 +24,7 @@ pipeline {
         }
 
         // Plugins Reference: 
-        // using the Sonar Plugin https://www.jenkins.io/doc/pipeline/steps/sonar/#waitforqualitygate-wait-for-sonarqube-analysis-to-be-completed-and-return-quality-gate-status
-        // https://www.jenkins.io/doc/pipeline/steps/sonar/
+        // using the Sonar Plugin: https://www.jenkins.io/doc/pipeline/steps/sonar/
 
         stage('Scan') {
             steps {
