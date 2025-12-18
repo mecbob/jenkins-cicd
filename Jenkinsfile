@@ -31,7 +31,7 @@ pipeline {
                  dir('JJtechBatchApp') {
                  withSonarQubeEnv(installationName: 'jenkins-sonar') {  // replace with sonarQube plugin
                     // sh './mvn clean org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'   To use a specific version of sonarqube
-                    sh '${MAVEN_HOME}/bin/mvn clean package sonar:sonar'       // uses the installed sonar plugin
+                    sh "${MAVEN_HOME}/bin/mvn clean sonar:sonar"       // uses the installed sonar plugin
                  } }
             }
         }
