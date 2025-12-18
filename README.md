@@ -55,7 +55,7 @@ In the tomcat home directory **/opt/tomcat/conf** , update users information in 
 ## On `jenkins_mvn_server` Install JAVA (a prerequisite for Jenkins and Maven)
 Add required dependencies for the jenkins package
 
-     sudo apt update && sudo apt install fontconfig openjdk-17-jre -y
+     sudo apt update && sudo apt install fontconfig openjdk-21-jre -y
 
      java -version 
 
