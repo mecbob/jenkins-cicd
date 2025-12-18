@@ -25,13 +25,14 @@ pipeline {
 
         // Plugins Reference: 
         // using the Sonar Plugin https://www.jenkins.io/doc/pipeline/steps/sonar/#waitforqualitygate-wait-for-sonarqube-analysis-to-be-completed-and-return-quality-gate-status
+        // https://www.jenkins.io/doc/pipeline/steps/sonar/
 
         stage('Scan') {
             steps {
                  dir('JJtechBatchApp') {
-                 withSonarQubeEnv(installationName: 'jenkins-sonar') {  // replace with sonarQube plugin
+                 withSonarQubeEnv(installationName: 'jenkins-sonar') {  // jenkins-sonar is the name of installation/configuration on the jenkins server
                     // sh './mvn clean org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'   To use a specific version of sonarqube
-                    sh "${MAVEN_HOME}/bin/mvn clean sonar:sonar"       // uses the installed sonar plugin
+                    sh "${MAVEN_HOME}/bin/mvn clean sonar:sonar"       // uses the installed sonar plugin: Setup https://docs.sonarsource.com/sonarqube-server/analyzing-source-code/ci-integration/jenkins-integration/global-setup
                  } }
             }
         }
