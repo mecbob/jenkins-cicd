@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Define variables
-TOMCAT_VERSION="9.0.98"  # Change as per your desired version
+TOMCAT_VERSION="9.0.111"  # Change as per your desired version
 TOMCAT_URL="https://downloads.apache.org/tomcat/tomcat-9/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz"
-#https://downloads.apache.org/tomcat/tomcat-9/v9.0.98/bin/apache-tomcat-9.0.98.tar.gz
+#https://downloads.apache.org/tomcat/tomcat-9/v9.0.111/bin/apache-tomcat-9.0.111.tar.gz
 
 
 # Update and install necessary packages
@@ -11,12 +11,12 @@ sudo apt update -y && sudo apt install -y wget tar
 
 
 # Install Java
-sudo apt install fontconfig openjdk-17-jre -y
+sudo apt install fontconfig openjdk-21-jre -y
 
 # Download and extract Tomcat
 wget $TOMCAT_URL
 sudo tar -xvzf apache-tomcat-${TOMCAT_VERSION}.tar.gz 
-sudo mv apache-tomcat-9.0.98 /opt/tomcat
+sudo mv apache-tomcat-9.0.111 /opt/tomcat
 
 # enable script execution
 sudo chmod +x /opt/tomcat/bin/*.sh
