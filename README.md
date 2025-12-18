@@ -19,7 +19,7 @@ In order to install nexus and Sonar, please follow steps outlined [here](https:/
 
 ### Configure SonarQube
 
-- Create [tokne] (https://docs.sonarsource.com/sonarqube-server/10.0/user-guide/user-account/generating-and-using-tokens)
+- Create [token](https://docs.sonarsource.com/sonarqube-server/10.0/user-guide/user-account/generating-and-using-tokens)
 - Create sonar-jenkins [webhook](https://docs.sonarsource.com/sonarqube-server/2025.5/project-administration/webhooks) (only after the Jenkins Server is available) this will be used in the pipeline.
 - 
 
