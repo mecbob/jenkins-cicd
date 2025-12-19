@@ -3,7 +3,7 @@ pipeline {
     environment {
         MAVEN_HOME = '/usr/share/maven'  // maven home directory.  Obtain home directory using mvn --version
         ARTIFACT_PATH = 'JJtechBatchApp/target/JJtechBatchApp.war'
-        TOMCAT_URL = 'http://3.81.227.207:8080/'  // replace with your tomcat url
+        TOMCAT_URL = 'http://3.78.186.109:8080/'  // replace with your tomcat url
 
     }
     stages {
